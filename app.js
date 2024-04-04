@@ -4,7 +4,7 @@ const { allProductsRouter } = require("./routes/allProductsRouter");
 const { homeRouter } = require("./routes/homeRouter");
 const ErrorHandler = require("./utils/ErrorHandler");
 const authRoute = require("./routes/authRoute");
-const { checkAuth } = require("./middleware/Auth");
+const { checkAuth } = require("./middleware/auth");
 
 const getuserRoute = require("./routes/getUser");
 
