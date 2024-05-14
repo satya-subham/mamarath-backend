@@ -14,6 +14,10 @@ const app = express();
 app.use(express.json());
 app.use(CORS());
 
+app.get("/hello",(_,res)=>{
+  res.send("welcome")
+})
+
 app.use("/api/v1/home", homeRouter);
 app.use("/api/v1/allproducts", allProductsRouter);
 
