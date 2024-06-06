@@ -15,9 +15,6 @@ app.use(cookieParser()); // cookieParser() always has to be declared at the top 
 app.use(express.json());
 app.use(CORS({ origin: 'http://localhost:5173' , credentials: true}));
 
-app.get("/hello",(_,res)=>{
-res.send("welcome")
-})
 
 app.use("/api/v1/home", homeRouter);
 app.use("/api/v1/allproducts", allProductsRouter);
