@@ -30,12 +30,10 @@ const logInHandler = WrapperHandler(async (req, res, next) => {
   const token = setUser(user);
   console.log(token)
 
-  // res.cookie("token", token, { httpOnly: true, secure: true });
   res.cookie("token", token, {
     maxAge: 3600000,
     secure: true,
     sameSite: "None"
-    // path: 'http://localhost:8000/api/v1/users'
   });
 
   res.status(200).send({
