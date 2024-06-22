@@ -35,7 +35,7 @@ const logInHandler = WrapperHandler(async (req, res, next) => {
     maxAge: 3600000,
     secure: true,
     sameSite: "Strict",
-    httpOnly: true,
+    httpsOnly: true,
     secure: true
     // path: 'http://localhost:8000/api/v1/users'
   });
