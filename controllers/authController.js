@@ -34,9 +34,6 @@ const logInHandler = WrapperHandler(async (req, res, next) => {
   res.cookie("token", token, {
     maxAge: 3600000,
     secure: true,
-    sameSite: true,
-    httpsOnly: true,
-    secure: true
     // path: 'http://localhost:8000/api/v1/users'
   });
 
