@@ -11,12 +11,12 @@ const getuserRoute = require("./routes/getUser");
 
 const app = express();
 
-const origins = {
-  react: 'https://react-mamaearth-clone.vercel.app/'
-}
 
 app.use(cookieParser()); // cookieParser() always has to be declared at the top level of the routes else it will return [Object: null prototype] {} 
 app.use(express.json());
+const origins = {
+  react: 'https://react-mamaearth-clone.vercel.app/'
+}
 app.use(CORS({ origin: origins , credentials: true}));
 
 
