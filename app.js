@@ -15,7 +15,8 @@ app.use(express.json());
 const origins = {
   react: "https://react-mamaearth-clone.vercel.app/",
 };
-app.use(CORS({ origin: origins, credentials: true }));
+// app.use(CORS({ origin: origins, credentials: true }));
+app.use(CORS());
 
 app.use("/api/v1/home", homeRouter);
 app.use("/api/v1/allproducts", allProductsRouter);
