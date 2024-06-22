@@ -13,6 +13,6 @@ async function connectToDatabase() {
 }
 connectToDatabase();
 
-app.listen(8000, () => {
+app.listen(process.env || 8000, () => {
   console.log("server is running on port 8000");
 });
