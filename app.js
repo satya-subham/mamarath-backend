@@ -7,6 +7,7 @@ const authRoute = require("./routes/authRoute");
 const cookieParser = require("cookie-parser");
 
 const getuserRoute = require("./routes/getUser");
+const { faceProductRouter } = require("./routes/faceRouter");
 
 const app = express();
 
@@ -19,6 +20,7 @@ app.use(CORS({ origin: origins, credentials: true }));
 
 app.use("/api/v1/home", homeRouter);
 app.use("/api/v1/allproducts", allProductsRouter);
+app.use("/api/v1/face", faceProductRouter);
 
 // authentication routes
 app.use("/api/v1/users", authRoute);
