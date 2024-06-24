@@ -8,6 +8,7 @@ const cookieParser = require("cookie-parser");
 
 const getuserRoute = require("./routes/getUser");
 const { faceProductRouter } = require("./routes/faceRouter");
+const { hairProductRouter } = require("./routes/hairRouter");
 
 const app = express();
 
@@ -21,6 +22,7 @@ app.use(CORS({ origin: origins, credentials: true }));
 app.use("/api/v1/home", homeRouter);
 app.use("/api/v1/allproducts", allProductsRouter);
 app.use("/api/v1/face", faceProductRouter);
+app.use("/api/v1/hair", hairProductRouter);
 
 // authentication routes
 app.use("/api/v1/users", authRoute);
