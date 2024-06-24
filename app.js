@@ -11,6 +11,7 @@ const { faceProductRouter } = require("./routes/faceRouter");
 const { hairProductRouter } = require("./routes/hairRouter");
 const { makeupRouter } = require("./routes/makeupRouter");
 const { bodyProductsRouter } = require("./routes/bodyRouter");
+const { babyProductsRouter } = require("./routes/babyRouter");
 
 const app = express();
 
@@ -27,6 +28,7 @@ app.use("/api/v1/face", faceProductRouter);
 app.use("/api/v1/hair", hairProductRouter);
 app.use("/api/v1/makeup", makeupRouter);
 app.use("/api/v1/body", bodyProductsRouter);
+app.use("/api/v1/baby", babyProductsRouter);
 
 // authentication routes
 app.use("/api/v1/users", authRoute);
