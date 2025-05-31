@@ -18,12 +18,8 @@ const app = express();
 
 app.use(cookieParser());
 app.use(express.json());
-const origins = {
-  react: "https://react-mamaearth-clone.vercel.app/",
-  reactVite: "http://localhost:5173/",
-  extra: "http://localhost:5174/"
-};
-app.use(CORS({ origin: origins, credentials: true }));
+
+app.use(CORS({ origin: '*', credentials: true }));
 
 app.use("/api/v1/home", homeRouter);
 app.use("/api/v1/allproducts", allProductsRouter);
